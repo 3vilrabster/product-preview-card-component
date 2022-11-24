@@ -1,0 +1,142 @@
+:root {
+  --p-darkcyan: hsl(158, 36%, 37%);
+  --p-cream: hsl(30, 38%, 92%);
+  --n-verydarkblue: hsl(212, 21%, 14%);
+  --n-darkgrayishblue: hsl(228, 12%, 48%);
+  --n-white: hsl(0, 0%, 100%);
+  --ff-serif: "Fraunces", serif;
+  --ff-sansserif: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 14px;
+  font-family: var(--ff-sansserif);
+  background-color: var(--p-cream);
+}
+
+h1,
+.prices p {
+  font-family: var(--ff-serif);
+}
+
+h1 {
+  font-size: 3.8rem;
+  line-height: 1;
+}
+
+.card {
+  background-color: var(--n-white);
+  border-radius: 20px;
+  margin: 30px 40px;
+}
+
+.text {
+  padding: 40px;
+}
+
+.text .small-title {
+  text-transform: uppercase;
+  letter-spacing: 2mm;
+  color: var(--n-darkgrayishblue);
+}
+
+.text #description {
+  line-height: 2;
+  font-size: 1.2rem;
+  color: var(--n-darkgrayishblue);
+}
+
+.text .prices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text .prices p {
+  margin-right: 50px;
+}
+
+.text .prices #discount {
+  font-size: 2.5rem;
+  color: var(--p-darkcyan);
+}
+
+.text .prices #price {
+  font-family: var(--ff-sansserif);
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: var(--n-darkgrayishblue);
+}
+
+button {
+  background-color: var(--p-darkcyan);
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  line-height: 4;
+  font-size: 1.2rem;
+  font-family: var(--ff-sansserif);
+  color: var(--n-white);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--n-verydarkblue);
+}
+
+@media only screen and (min-width: 23.4375em) {
+  /* Mobile: 375px - CSS rules here */
+  img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    max-width: 100%;
+  }
+  #img-desktop {
+    display: none;
+  }
+  #img-mobile {
+    display: block;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 70em) {
+  /* Desktop: 1440px - CSS rules here */
+  .card {
+    display: flex;
+    margin: 50px 400px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-height: 530px;
+  }
+
+  img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+  }
+
+  img::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  #img-desktop {
+    display: block;
+  }
+
+  #img-mobile {
+    display: none;
+  }
+}
